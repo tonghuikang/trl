@@ -89,11 +89,11 @@ def _tokenize(
         chosen_tokens = _process_answer(prompt, features["chosen"], processor, tokenizer, images)
         rejected_tokens = _process_answer(prompt, features["rejected"], processor, tokenizer, images)
 
-        prompt_len_input_ids = _adjust_prompt_length(prompt_tokens, chosen_tokens, rejected_tokens)
+        # prompt_len_input_ids = _adjust_prompt_length(prompt_tokens, chosen_tokens, rejected_tokens)
 
-        prompt_tokens, chosen_tokens, rejected_tokens = _add_special_tokens(
-            tokenizer, prompt_len_input_ids, prompt_tokens, chosen_tokens, rejected_tokens
-        )
+        # prompt_tokens, chosen_tokens, rejected_tokens = _add_special_tokens(
+        #     tokenizer, prompt_len_input_ids, prompt_tokens, chosen_tokens, rejected_tokens
+        # )
 
         _truncate_tokens(chosen_tokens, rejected_tokens, prompt_tokens, args)
 
